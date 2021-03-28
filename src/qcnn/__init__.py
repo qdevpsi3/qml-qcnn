@@ -1,0 +1,1 @@
+from qcnn.quantum_convolution import QuantumConv2d

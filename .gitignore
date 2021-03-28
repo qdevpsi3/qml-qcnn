@@ -112,3 +112,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# additional
+.DS_Store
+.vscode/
+scripts/mnist_classification/datasets/**
+scripts/mnist_classification/lightning_logs/**
