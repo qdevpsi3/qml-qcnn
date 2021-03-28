@@ -120,6 +120,9 @@ dmypy.json
 # datasets
 scripts/mnist_classification/datasets/fashion/**
 scripts/mnist_classification/datasets/mnist/**
+notebooks/fashion/**
+notebooks/mnist/**
 
 # logs
 scripts/mnist_classification/lightning_logs/**
+notebooks/lightning_logs/**

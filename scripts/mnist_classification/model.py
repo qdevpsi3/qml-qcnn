@@ -18,10 +18,10 @@ class QuantumConvNet(pl.LightningModule):
     def build_q_nn(self):
 
         # get quantum hyperparameters
-        eps = self.hparams.quantum_eps
-        cap = self.hparams.quantum_cap
-        ratio = self.hparams.quantum_ratio
-        delta = self.hparams.quantum_delta
+        eps = self.hparams.eps
+        cap = self.hparams.cap
+        ratio = self.hparams.ratio
+        delta = self.hparams.delta
 
         # build neural network classifier
         self.qonv1 = QuantumConv2d(1, 5, 7, eps, cap, ratio, delta, stride=1)

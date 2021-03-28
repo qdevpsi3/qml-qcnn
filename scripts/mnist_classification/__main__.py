@@ -1,4 +1,7 @@
 import argparse
+import warnings
+
+warnings.filterwarnings('ignore')
 
 import pytorch_lightning as pl
 import torch
@@ -6,19 +9,19 @@ import torch
 from model import QuantumConvNet
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--quantum_eps',
+parser.add_argument('--eps',
                     type=float,
                     default=0.01,
                     help='precision of quantum multiplication')
-parser.add_argument('--quantum_cap',
+parser.add_argument('--cap',
                     type=float,
                     default=10.,
                     help='value of cap relu activation function')
-parser.add_argument('--quantum_ratio',
+parser.add_argument('--ratio',
                     type=float,
                     default=0.5,
                     help='precision of quantum tomography')
-parser.add_argument('--quantum_delta',
+parser.add_argument('--delta',
                     type=float,
                     default=0.01,
                     help='precision of quantum gradient estimation')
