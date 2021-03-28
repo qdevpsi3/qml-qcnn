@@ -67,7 +67,7 @@ $ pip install pytorch_lightning
 You can run an experiment using the following command : 
 ```
 $ cd qml-qcnn/scripts/
-$ python mnist_classification --eps=0.01  --cap=10  --ratio=0.5 --delta=0.01
+$ python mnist_classification --eps=0.01 --cap=10 --ratio=0.5 --delta=0.01
 ```
 
 ## Acknowledgements
