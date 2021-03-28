@@ -5,7 +5,7 @@
 [![framework](https://img.shields.io/static/v1.svg?label=Framework&message=PyTorch&color=ee4c2d)](https://pytorch.org)
 [![packages](https://img.shields.io/static/v1.svg?label=Made%20with&message=PyTorch%20Lightning&color=blueviolet)](https://www.pytorchlightning.ai)
 [![license](https://img.shields.io/static/v1.svg?label=License&message=GPL%20v3.0&color=blue)](https://www.gnu.org/licenses/gpl-3.0.html)
-[![exp](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/qdevpsi3/qml-qcnn/notebooks/mnist_classification.ipynb)
+[![exp](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/qdevpsi3/qml-qcnn/blob/main/notebooks/mnist_classification.ipynb)
 </div>
 
 ## Description
@@ -59,7 +59,7 @@ torch_conv2d = qcnn.QuantumConv2d(16, 32, 3, eps, cap, ratio, delta, stride=1)
 ## Experiments
 The <ins>experiments</ins> in the paper are reproduced for <ins>MNIST classification task</ins> using *PyTorch Lightning*. 
 
-- Option 1 : Open in [Colab](https://colab.research.google.com/github/qdevpsi3/qml-qcnn/notebooks/mnist_classification.ipynb)
+- Option 1 : Open in [Colab](https://colab.research.google.com/github/qdevpsi3/qml-qcnn/blob/main/notebooks/mnist_classification.ipynb)
 - Option 2 : Run on local machine. First, you need to install *PyTorch Lightning* :
 ```
 $ pip install pytorch_lightning
