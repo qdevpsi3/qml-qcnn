@@ -116,5 +116,10 @@ dmypy.json
 # additional
 .DS_Store
 .vscode/
-scripts/mnist_classification/datasets/**
+
+# datasets
+scripts/mnist_classification/datasets/fashion/**
+scripts/mnist_classification/datasets/mnist/**
+
+# logs
 scripts/mnist_classification/lightning_logs/**
