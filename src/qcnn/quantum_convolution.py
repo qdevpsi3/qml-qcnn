@@ -101,8 +101,8 @@ class QuantumConv2d(nn.Conv2d):
 
             # add gaussian noise
             vars = torch.bmm(input_norm, kernel_norm).reshape(output.shape)
-            noise = self.quantum_eps * torch.randn(output.shape).to(
-                vars.device)
+            noise = self.quantum_eps * torch.randn(output.shape,
+                                                   device=vars.device)
             errors = 2 * torch.mul(vars, noise)
             output = output + errors
             output = torch.clamp(output, 0., self.quantum_cap)
