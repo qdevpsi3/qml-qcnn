@@ -2,8 +2,10 @@
 <div align="center" >
 
 [![paper](https://img.shields.io/static/v1.svg?label=Paper&message=KLP19&color=blue)](https://arxiv.org/abs/1911.01117)
-[![framework](https://img.shields.io/static/v1.svg?label=Framework&message=PyTorch&color=ee4c2d)](https://www.pytorchlightning.ai)
+[![framework](https://img.shields.io/static/v1.svg?label=Framework&message=PyTorch&color=ee4c2d)](https://pytorch.org)
+[![packages](https://img.shields.io/static/v1.svg?label=Made%20with&message=PyTorch%20Lightning&color=blueviolet)](https://www.pytorchlightning.ai)
 [![license](https://img.shields.io/static/v1.svg?label=License&message=GPL%20v3.0&color=blue)](https://www.gnu.org/licenses/gpl-3.0.html)
+[![exp](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/qdevpsi3/qml-qcnn/notebooks/mnist_classification.ipynb)
 </div>
 
 ## Description
@@ -42,7 +44,7 @@ from torch import nn
 
 torch_conv2d = nn.Conv2d(16, 32, 3, stride=1)
 ```
-Similarly, can use the 2D <ins>quantum</ins> convolution module as follows :
+Similarly, you can use the 2D <ins>quantum</ins> convolution module as follows :
 ```python
 import qcnn
 
@@ -53,3 +55,20 @@ delta = 0.01
 
 torch_conv2d = qcnn.QuantumConv2d(16, 32, 3, eps, cap, ratio, delta, stride=1)
 ```
+
+## Experiments
+The <ins>experiments</ins> in the paper are reproduced for <ins>MNIST classification task</ins> using *PyTorch Lightning*. 
+
+- Option 1 : Open in [Colab](https://colab.research.google.com/github/qdevpsi3/qml-qcnn/notebooks/mnist_classification.ipynb)
+- Option 2 : Run on local machine. First, you need to install *PyTorch Lightning* :
+```
+$ pip install pytorch_lightning
+```
+You can run an experiment using the following command : 
+```
+$ cd qml-qcnn/scripts/
+$ python mnist_classification --eps=0.01  --cap=10  --ratio=0.5 --delta=0.01
+```
+
+## Acknowledgements
+- [Official implementation](https://github.com/JonasLandman/QCNN)
