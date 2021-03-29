@@ -16,7 +16,6 @@ class QuantumConvNet(pl.LightningModule):
         self.build_q_nn()
 
     def build_q_nn(self):
-
         # get quantum hyperparameters
         eps = self.hparams.eps
         cap = self.hparams.cap
