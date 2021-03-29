@@ -28,10 +28,10 @@ The quantum convolutional layer is a <ins>PyTorch module</ins> with the followin
 - **in_channels** (int): *number of input channels.*
 - **out_channels** (int): *number of output channels.*
 - **kernel_size** (int): *size of the convolution kernel.*
-- <span style="color:red;">**eps** (float):</span> *precision of quantum multiplication.*
-- <span style="color:red;">**cap** (float):</span> *value for cap 'relu' activation function.*
-- <span style="color:red;">**ratio** (float):</span> *precision of quantum tomography.*
-- <span style="color:red;">**delta** (float):</span> *precision of quantum gradient estimation.*
+- <ins>**eps** (float): *precision of quantum multiplication.*</ins>
+- <ins>**cap** (float): *value for cap 'relu' activation function.*</ins>
+- <ins>**ratio** (float): *precision of quantum tomography.*</ins>
+- <ins>**delta** (float): *precision of quantum gradient estimation.*</ins>
 - **stride** (int, optional): *convolution stride.* Defaults to 1.
 - **padding** (int, optional): *convolution padding.* Defaults to 0.
 - **dilation** (int, optional): *convolution dilation.* Defaults to 1.
