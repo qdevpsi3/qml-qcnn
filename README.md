@@ -59,12 +59,12 @@ torch_conv2d = qcnn.QuantumConv2d(16, 32, 3, eps, cap, ratio, delta, stride=1)
 ## Experiments
 The <ins>experiments</ins> in the paper are reproduced for <ins>MNIST classification task</ins> using *PyTorch Lightning*. 
 
-- Option 1 : Open in [Colab](https://colab.research.google.com/github/qdevpsi3/qml-qcnn/blob/main/notebooks/mnist_classification.ipynb)
+- Option 1 : Open in [Colab](https://colab.research.google.com/github/qdevpsi3/qml-qcnn/blob/main/notebooks/mnist_classification.ipynb). You can activate the <ins>GPU</ins> in *Notebook Settings*.
 - Option 2 : Run on local machine. First, you need to install *PyTorch Lightning* :
 ```
 $ pip install pytorch_lightning
 ```
-You can run an experiment using the following command : 
+You can run an experiment using the following command :
 ```
 $ cd qml-qcnn/scripts/
 $ python mnist_classification --eps=0.01 --cap=10 --ratio=0.5 --delta=0.01
