@@ -47,16 +47,9 @@ class QuantumConv2d(nn.Conv2d):
         self.quantum_eps = quantum_eps
         self.quantum_ratio = quantum_ratio
         self.quantum_cap = quantum_cap
+        self.quantum_delta = quantum_delta
 
-        # add quantum gradient estimation error to the kernel
-        def simulate_quantum_gradient(grad):
-            noise = torch.randn(grad.shape, device=grad.device)
-            grad_norm = torch.norm(grad)
-            error = quantum_delta * grad_norm * noise
-            grad += error
-            return grad
-
-        self.weight.register_hook(simulate_quantum_gradient)
+        self.weight.register_hook(self.simulate_quantum_gradient)
 
     def extra_repr(self):
         s = '{in_channels}, {out_channels}, kernel_size={kernel_size}, '
@@ -118,3 +111,11 @@ class QuantumConv2d(nn.Conv2d):
             mask = mask.reshape(output.shape)
             output = mask * output
         return output
+
+    def simulate_quantum_gradient(self, grad):
+        # add quantum gradient estimation error to the kernel
+        noise = torch.randn(grad.shape, device=grad.device)
+        grad_norm = torch.norm(grad)
+        error = self.quantum_delta * grad_norm * noise
+        grad += error
+        return grad
